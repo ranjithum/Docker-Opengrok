@@ -16,8 +16,8 @@ do
 done
 
 echo "opengrok-indexer start" >> /tmp/open-grok-reindex.log
-/bin/opengrok-indexer -J=-Djava.util.logging.config.file=/var/opengrok/logging.properties \
-        -a /root/opengrok-1.1/lib/opengrok.jar -- \
+opengrok-indexer -J=-Djava.util.logging.config.file=/var/opengrok/logging.properties \
+        -a opengrok-1.1/lib/opengrok.jar -- \
         -c /usr/local/bin/ctags \
         -s /var/opengrok/source \
         -d /var/opengrok/data -H -P -S -G  \
