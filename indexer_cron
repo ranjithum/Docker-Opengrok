@@ -1,0 +1,1 @@
+0 0 * * * /bin/bash /var/opengrok/etc/open-grok_syncer.sh
