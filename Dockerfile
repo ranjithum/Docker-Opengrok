@@ -15,7 +15,7 @@ RUN cd ctags && ./autogen.sh && ./configure && make -j4 && make install
 RUN rm -rf /ctags && \
     apt remove autoconf pkg-config build-essential -y
 
-RUN mkdir -p /var/opengrok/data /var/opengrok/etc /var/opengrok/source
+RUN mkdir -p /var/opengrok/data /var/opengrok/etc /var/opengrok/source /root/.ssh
 
 COPY open-grok_syncer.sh /var/opengrok/etc/
 COPY indexer_cron /etc/cron.d/indexer_cron
@@ -25,4 +25,4 @@ RUN chmod 0644 /etc/cron.d/indexer_cron && \
 
 RUN cp /opengrok-1.1/lib/source.war /var/lib/tomcat8/webapps
 
-CMD ssh-agent; /etc/init.d/tomcat8 start; while true ; do sleep 100; done;
+CMD /etc/init.d/tomcat8 start; while true ; do sleep 100; done;
