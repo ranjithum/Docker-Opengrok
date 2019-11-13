@@ -21,5 +21,5 @@ echo "opengrok-indexer start" >> /tmp/open-grok-reindex.log
         -c /usr/local/bin/ctags \
         -s /var/opengrok/source \
         -d /var/opengrok/data -H -P -S -G  \
-        -W /var/opengrok/etc/configuration.xml -U "http://localhost:8080/source" >> /tmp/open-grok-reindex.log
+        -W /var/opengrok/etc/configuration.xml -U "http://localhost:8080/suckit" >> /tmp/open-grok-reindex.log
 echo "**** Complete $(date) ****" >> /tmp/open-grok-reindex.log
