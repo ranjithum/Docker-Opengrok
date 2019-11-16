@@ -21,7 +21,7 @@ RUN mkdir -p /var/opengrok/data /var/opengrok/etc /var/opengrok/source /root/.ss
     chmod 400 /home/id_rsa && \
     chmod 0644 /etc/cron.d/indexer_cron && \
     crontab /etc/cron.d/indexer_cron && \
-    cp /opengrok-1.1/lib/source.war /var/lib/tomcat8/webapps/suckit.war && \
+    cp /opengrok-1.3.3/lib/source.war /var/lib/tomcat8/webapps/suckit.war && \
     rm -rf /ctags /opengrok-1.3.3.tar.gz
 
 CMD ./start_service.sh
