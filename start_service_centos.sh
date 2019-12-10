@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # start the tomcat service
-/etc/init.d/tomcat8 start
+/usr/share/tomcat/bin/start_tomcat.sh &
 
 # start the cron service
-/etc/init.d/cron start
+crond
 
-# Run dummy forever
+# run dummy forever
 while true
 do
 	sleep 100

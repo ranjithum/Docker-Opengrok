@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DIR=/var/opengrok/source
+opengrok_version="1.3.4"
 
 if [ ! "$(ls -A $DIR)" ]; then
     exit 0
@@ -17,7 +18,7 @@ done
 
 echo "opengrok-indexer start" >> /tmp/open-grok-reindex.log
 /usr/local/bin/opengrok-indexer -J=-Djava.util.logging.config.file=/var/opengrok/logging.properties \
-        -a /opengrok-1.3.3/lib/opengrok.jar -- \
+        -a /opengrok-${opengrok_version}/lib/opengrok.jar -- \
         -c /usr/local/bin/ctags \
         -s /var/opengrok/source \
         -d /var/opengrok/data -H -P -S -G  \
