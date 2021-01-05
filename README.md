@@ -1,11 +1,11 @@
 # Docker-Opengrok : Host opengrok on Docker.
 
-## How to build opengrok on ubuntu container
+## How to build opengrok with ubuntu container
 ```
 $ docker build -t ranjithum/opengrok-ubuntu -f Dockerfile.ubuntu .
 ```
 
-## How to build opengrok on centos8 container
+## How to build opengrok with centos8 container
 ```
 $ docker build -t ranjithum/opengrok-centos -f Dockerfile.centos .
 ```
